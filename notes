@@ -1,0 +1,14 @@
+# The SG2 project for CS 4500 (Spring 2025) is a team-based assignment
+# where students develop a program to process and validate CSV files
+# containing species abundance data.
+# The program prompts the user for a file, ensures it exists with a valid .csv
+# extension, and verifies that dates and abundance counts meet specified criteria.
+# Errors trigger detailed messages before termination.
+# Extracted species names and dates are saved in separate files, while abundance
+# data is converted into a binary presence/absence format.
+# The program also identifies maximum abundance values per date and groups
+# dates with identical presence patterns.
+# Teams must log daily communication via email, and the final submission
+# includes source code, a design document, and a test plan.
+# This project emphasizes data validation, structured reporting,
+# software reuse, and collaboration.
