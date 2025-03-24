@@ -1,3 +1,42 @@
+# Program Completed in Python in Jetbrains IDE Pycharm
+# Name: Cornell Stokes, Eli Kern, Hassan Bhatti
+# Date: 03/23/2025
+
+# SG2 Program - Species Abundance Data Processor
+#
+# This program processes and analyzes CSV files containing species abundance data recorded on various dates.
+# It ensures data validity, extracts key information, and generates structured output files.
+#
+# How It Works:
+# 1. User Input:
+#    - Prompts the user to enter a CSV file name.
+#    - Verifies that the file exists and has the correct format.
+#
+# 2. Data Processing:
+#    - Reads species names from the first row of the file.
+#    - Extracts and validates dates in the dataset.
+#    - Ensures all abundance values are valid non-negative numbers.
+#
+# 3. Output Generation:
+#    - Saves species names in 'Species.txt'.
+#    - Saves all recorded dates in 'DatedData.txt'.
+#    - Converts abundance counts into presence/absence (1 or 0) and stores them in 'PresentAbsent.txt'.
+#
+# 4. Analysis & Reporting:
+#    - Displays the total number of species and dates.
+#    - Identifies the highest abundance value per date and the corresponding species.
+#    - Groups and lists dates with identical presence/absence patterns.
+#
+# 5. Program Completion:
+#    - After processing, the user is prompted to press ENTER to exit the program.
+#
+# The program ensures structured data processing, error validation, and meaningful reporting
+# for biological datasets.
+
+# How to Compile: Save your test file to the same directory as main.py then run the program,follow the prompts and check the files that are created.
+# Class Section: CMPSCI 4500-001 Software Profession
+
+
 import os
 import re
 import csv
@@ -105,11 +144,22 @@ def file_write(names, dates, bin_data, presence_report, max_abundance_report):
             file.write(report + '\n')
 
 def main():
-    user_input = input("This program does......")
+    user_input = input(
+        "This program processes and analyzes CSV files containing species abundance data recorded on various dates.\n"
+        "It ensures data validity, extracts key information, and generates structured output files.\n\n"
+        "Key Features:\n"
+        "- Reads and validates species names, dates, and abundance values.\n"
+        "- Saves species names in 'Species.txt' and dates in 'DatedData.txt'.\n"
+        "- Converts abundance counts into presence/absence (1 or 0) and stores them in 'PresentAbsent.txt'.\n"
+        "- Identifies the highest abundance per date and groups dates with identical presence/absence patterns.\n\n"
+        "Press ENTER to continue..."
+    )
+
     if user_input == "":
-        print("You selected option 1")
+        file_search()
     else:
         print("You selected option 2")
-    file_search()
+
+    input("Press ENTER to exit the program.")
 
 main()
